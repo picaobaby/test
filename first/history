@@ -1,0 +1,30 @@
+@import "compass";
+@import "theme_variables";
+
+#order-detail-content table {
+  .return_quantity_buttons {
+    a {
+      &+a {}
+    }
+  }
+  .order_qte_input {}
+  label {}
+}
+.table {
+  td.history_detail {
+    a + a {}
+  }
+  td.step-by-step-date {}
+  tfoot {
+    strong {}
+  }
+}
+.info-order {
+  i {
+    &.icon-gift {}
+    &.icon-repeat {}
+  }
+}
+#sendOrderMessage {
+  select.form-control {}
+}

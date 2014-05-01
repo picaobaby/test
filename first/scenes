@@ -1,0 +1,37 @@
+@import "compass";
+@import "theme_variables";
+
+/********************************************************
+      Scenes Styles
+********************************************************/
+#scenes .popover-button span{
+  &:before {}
+}
+.thumbs_banner{
+  .space-keeper{
+    a.prev{
+      &:before {}
+    }
+    a.next {
+      &:before {}
+    } 
+  }
+}
+#scenes_list{
+  ul{}
+  li{}
+  a{
+  }
+}
+#scenes {
+  a.popover-button {}
+  .popover {}
+  .product-image-container, 
+  .product-name {}
+  div.description {}
+  .button-container {
+    a {}
+  }
+  .price {}
+  @media  (max-width: $screen-md-max) {}
+}

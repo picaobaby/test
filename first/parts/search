@@ -1,0 +1,27 @@
+@import "compass";
+@import "theme_variables";
+
+#search_block_top {
+  #searchbox {}
+  .btn.button-search {
+    span {}
+    &:before {}
+    &:hover {}
+  }
+  #search_query_top {}
+}
+
+.ac_results {
+  li {
+    &.ac_odd {}
+    &:hover, &.ac_over {}
+  }
+} 
+
+form#searchbox {
+  label {}
+  input#search_query_block {}
+  .button.button-small {
+    i {}
+  }
+}

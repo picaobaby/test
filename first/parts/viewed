@@ -1,0 +1,3 @@
+#viewed-products_block_left {
+  li.last_item {}
+}

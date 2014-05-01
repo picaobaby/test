@@ -1,0 +1,53 @@
+@import '../../_theme_variables';
+
+#enabled_filters {}
+#enabled_filters .layered_subtitle {}
+#enabled_filters ul li {}
+#enabled_filters li a {}
+#layered_block_left .layered_close {}
+#layered_block_left span.layered_close a,
+#layered_block_left span.layered_close a {}
+#layered_block_left span.closed a {}
+
+#layered_block_left .layered_subtitle {}
+#layered_block_left ul {}
+#layered_block_left ul  li {}
+#layered_block_left ul li label {}
+#layered_block_left div.block_content {}
+#layered_block_left ul {}
+#layered_block_left ul li {}
+#layered_block_left div > form > div > div {}
+#layered_block_left #enabled_filters , #layered_url_filter_block{}
+#layered_block_left #enabled_filters ul li {}
+
+
+/* Style moved form the template to the css  */
+#layered_block_left #enabled_filters ul li:hover {}
+
+#layered_block_left ul li:hover {}
+#layered_block_left ul li input.checkbox {}
+#layered_block_left ul li .disabled {}
+#layered_block_left .color-option {}
+#layered_block_left .color-option.disable {}
+#layered_block_left .nomargin a {}
+#layered_form .select {}
+#layered_form .color-option {}
+#layered_form  .color-option.on {}
+#layered_form input[type=radio] {}
+.layered_price_range {}
+.layered_price_range_unit {}
+.layered_slider_container {}
+.layered_slider {}
+.layered_input_range_min {}
+.layered_input_range_max {}
+.layered_list_selected {}
+.layered_list {}
+.layered_list:hover {}
+.layered_ajax_loader p {}
+.hide-action {}
+.hide-action:hover {}
+#layered_form div div ul {}
+.layered_filter {
+  label {}
+  layered_subtitle {}
+}

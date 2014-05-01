@@ -1,0 +1,84 @@
+@import "compass";
+@import "theme_variables";
+
+/* lnk on detail product page */
+#wishlist_button {
+  &:before{}
+}
+
+/* wishlist block */
+#wishlist_block {
+  #wishlist_block_list {
+    dl {
+      &.products.no-products {
+        dt {}
+        dd{}
+      }
+      &.products {
+        dt {}
+        dd {}
+        dt.first_item {}
+      }
+      dt {}
+      dd {}
+    }
+  }
+  .lnk {
+    .form-group {
+      select {
+        @media (max-width: $screen-xs-max) {}
+      }
+    }
+  }
+  .ajax_cart_block_remove_link {
+    &:hover {}
+  }
+  .cart_block_product_name {}
+  .quantity-formated {}
+}
+#wishlist_block_list .price {}
+
+/* page in my account ************************************************************************* */
+#mywishlist {
+  td.wishlist_delete a {}
+}
+
+/* wishlistLinkTop */
+#module-blockwishlist-mywishlist {
+  #block-order-detail #hideSendWishlist {}
+}
+#module-blockwishlist-mywishlist .wishlistLinkTop ul.display_list {
+  a  {
+    &:hover {}
+  }
+}
+
+#module-blockwishlist-mywishlist .wishlistLinkTop li {}
+
+#module-blockwishlist-mywishlist .wishlistLinkTop #hideSendWishlist {}
+#module-blockwishlist-mywishlist .wishlistLinkTop #showBoughtProducts,
+#module-blockwishlist-mywishlist .wishlistLinkTop #hideBoughtProductsInfos {}
+
+/* wlp_bought_list */
+ul.wlp_bought_list li {
+  .product_image {}
+  .product-name {
+    small {
+      a {}
+    }
+  }
+  .product_infos {}
+  .btn_action .btn {}
+  /*> 992px*/
+  @media (min-width: $screen-md) {
+    &.first-in-line {}
+  }
+  /*768px x 991px*/
+  @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+    &.first-item-of-tablet-line  {}
+  }
+}
+.wishlistLinkTop {
+  .submit {}
+}
+ul.wlp_bought_list li .lnkdel {}

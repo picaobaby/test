@@ -1,0 +1,93 @@
+@import "compass";
+@import "theme_variables";
+
+
+/******************************************************************************
+            Home Page Slider
+*******************************************************************************/
+#homepage-slider {
+  @media (max-width: $screen-xs-max) {}
+  #homeslider {}
+  .homeslider-description {
+    h2 {}
+    p {}
+    button {}
+    @media (max-width: $screen-lg){}
+    @media (max-width: $screen-sm){
+      p {}
+    }
+    @media (max-width: $screen-xs){
+      p {}
+    }
+  }
+
+}
+/*****************************************************************************
+            BXSlider Styles
+********************************************************************************/
+//RESET AND LAYOUT
+#homepage-slider {
+  .homeslider-container {}
+  .homeslider-image {}
+  .homeslider-description {}
+  .bx-wrapper {
+    a {}
+    img {}
+  }
+
+  // THEME
+  .bx-wrapper {
+    .bx-viewport {}
+  }
+  .bx-wrapper .bx-pager,
+  .bx-wrapper .bx-controls-auto {}
+
+  //LOADER
+  .bx-wrapper .bx-loading {}
+  //PAGER
+  .bx-wrapper .bx-pager {}
+  .bx-wrapper .bx-pager .bx-pager-item,
+  .bx-wrapper .bx-controls-auto .bx-controls-auto-item {}
+  .bx-wrapper .bx-pager.bx-default-pager a {}
+  .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  .bx-wrapper .bx-pager.bx-default-pager a.active {}
+
+  //DIRECTION CONTROLS (NEXT / PREV)
+  .bx-wrapper .bx-prev {
+    &:after {}
+  }
+  .bx-wrapper .bx-next {
+    &:after {}
+  }
+  .bx-wrapper .bx-controls-direction a {
+    &:before {}
+    &:after {}
+    &:hover {
+      &:before {}
+    }
+  }
+  .bx-wrapper .bx-controls-direction a.disabled {}
+  //AUTO CONTROLS (START / STOP)
+  .bx-wrapper .bx-controls-auto {}
+  .bx-wrapper .bx-controls-auto .bx-start {}
+  .bx-wrapper .bx-controls-auto .bx-start:hover,
+  .bx-wrapper .bx-controls-auto .bx-start.active {}
+  .bx-wrapper .bx-controls-auto .bx-stop {}
+  .bx-wrapper .bx-controls-auto .bx-stop:hover,
+  .bx-wrapper .bx-controls-auto .bx-stop.active {}
+  
+  //PAGER WITH AUTO-CONTROLS HYBRID LAYOUT
+  .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {}
+  .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {}
+  //IMAGE CAPTIONS
+  .bx-wrapper .bx-caption {}
+  .bx-wrapper .bx-caption span {}
+}
+.ie8 {
+  #homepage-slider{
+    .bx-wrapper .bx-controls-direction a {
+      &:before {}
+    }
+  }
+}
+

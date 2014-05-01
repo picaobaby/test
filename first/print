@@ -1,0 +1,36 @@
+@import "compass";
+@import "theme_variables";
+
+@media only print {
+  #header {
+    .nav, .banner, .row > div {}
+    .row div#header_logo {}
+  }
+  #center_column {}
+  #left_column, #right_column {}
+  .no-print, #quantity_wanted_p > a, a.quick-view {}
+  div.selector, div.selector span, div.selector select {}
+  #thumbs_list li a:hover, #thumbs_list li a.shown {}
+  .product_attributes, .box-cart-bottom {}
+  .pb-left-column #views_block {}
+  #thumbs_list_frame, #thumbs_list {}
+  #thumbs_list {
+    li, li:first-child {}
+  }
+  #view_scroll_left, #view_scroll_right, .view_scroll_spacer {}
+  .bx-wrapper {}
+  .bx-viewport {}
+  #bxslider, #bxslider1, #crossselling_list_car {}
+  #bxslider1 {
+    .product-box {}
+  }
+  .bx-controls-direction {}
+  #footer {
+    .row {
+      >div, >section {
+        &#block_contact_infos {}
+      }
+    }
+  }
+  .footer-container #footer h4:after {}
+}

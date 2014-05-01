@@ -1,0 +1,9 @@
+#mailalerts_block_account {
+  li {
+    &.last_item {}
+    .products-block-image {}
+    .remove {
+      i {}
+    }
+  }
+}

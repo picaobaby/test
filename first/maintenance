@@ -1,0 +1,12 @@
+@import "compass";
+@import "theme_variables";
+
+#maintenance {
+  @media (min-width: $screen-lg) {}
+  .logo {}
+  h1 {}
+  #message {}
+}
+@media only screen and (min-width: 1200px) {
+  .container {}
+}

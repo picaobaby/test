@@ -1,0 +1,46 @@
+@import "compass";
+@import "theme_variables";
+
+/***********************************************************
+          Stores Page Styles
+************************************************************/
+#stores {
+  #map {}
+  input#addressInput {}
+  .address-input {
+    @media (max-width: $screen-xs-max) {}
+    label {}
+  }
+  .radius-input {
+    label, 
+    .selector {}
+      
+    label {}
+    #radiusSelect {}
+  }
+  .store-content {}
+  .store-content-select {
+      .selector {}
+      &.active {
+      .selector {}
+      }
+  }
+  .store-title {}
+  label {}
+  #stores_loader {}
+  #locationSelect {}
+  #stores-table {
+    tbody {
+      td {
+        &.num {}
+        &.name {
+          span {}
+          @media (max-width: $screen-xs-max) { 
+            img {}
+          }
+        }
+      }
+    }
+  }
+}
+.store-image img {}

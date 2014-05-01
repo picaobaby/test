@@ -1,0 +1,210 @@
+@import "compass";
+@import "theme_variables";
+
+/*******************************************************************
+					Cart Block Styles
+********************************************************************/
+#header .shopping_cart {
+	> a:first-child {
+		&:after {}
+	}
+	> a:first-child:hover {
+		&:after {
+		}
+	}
+}
+.shopping_cart {
+	@media (max-width: $screen-xs) {}
+	@media (max-width: $screen-lg){}
+	> a:first-child {
+		span.ajax_cart_product_txt, span.ajax_cart_product_txt_s {
+			@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
+		}
+		b {}
+		&:before {}
+	}
+	.ajax_cart_total {}
+	.block_cart_expand, .block_cart_collapse {
+		&:after {}
+	}
+	.block_cart_collapse {
+		&:after {}
+	}
+}
+
+.cart_block {
+	.cart_block_list {
+		.remove_link {}
+		.remove_link a,
+		.ajax_cart_block_remove_link {
+			&:before {}
+			&:hover {}
+		}
+	}
+	.cart-images {}
+	.cart-info {
+		.product-name {
+			a {}
+		}
+		.quantity-formated {
+    		.quantity{}
+		}
+	}
+	dt {}
+	dd {
+		.cart_block_customizations{
+			li {
+				.deleteCustomizableProduct {}
+			}
+		}
+		
+	}
+	.cart_block_no_products {}
+	.cart-prices {
+		.cart-prices-line {
+			&.last-line {}
+		}
+	}
+	.cart-buttons {
+		a {
+			&#button_order_cart {
+				span {}
+				&:hover span {}
+			}
+		}
+	}
+}
+/*******************************************************************
+					Cart Block(Header) Styles
+********************************************************************/
+#header {
+	.cart_block {
+		@media (max-width: $screen-xs) {}
+		@media (max-width: $screen-lg){}
+		a {
+			&:hover {}
+		}
+		.cart_block_list {
+			.remove_link a,
+			.ajax_cart_block_remove_link {
+				&:hover {}	
+			}
+		}
+		.price {}
+		dt {
+			&.first_item {}
+		}
+		.product-atributes {
+			a {
+				&:hover {
+				}
+			}
+		}
+		.cart-prices {}
+		.cart-buttons {}
+	}
+	.block_content {}
+}
+
+.cart_block #cart_block_summary,
+.cart_block .title_block span,
+#header .cart_block h4,
+#header .cart_block .title_block,
+#header .cart_block h4 {
+}
+
+.cart_block .cart_block_shipping_cost,
+.cart_block .cart_block_tax_cost,
+.cart_block .cart_block_total,
+.cart_block .cart_block_wrapping_cost {
+}
+
+.cart_block table.vouchers {
+	tr td {
+		&.quantity{}
+		&.delete{}
+	}
+}
+/*****************************************************************************
+					Layer Cart Css
+*****************************************************************************/
+.layer_cart_overlay {}
+
+* html .layer_cart_overlay {}
+
+#layer_cart {
+	.layer_cart_product {
+		h2 {
+			@media (max-width: $screen-xs-max) {}
+			i {
+				@media (max-width: $screen-xs-max) {}
+			}
+		}
+		.product-image-container {
+			@media (max-width: $screen-xs) {}
+		}
+		.layer_cart_product_info {
+			#layer_cart_product_title {}
+			> div {
+				strong {}
+			}
+		}
+	}
+	.layer_cart_cart {
+		@media (min-width: $screen-lg) {}
+		
+		@media (min-width: $screen-md) and (max-width: $screen-md-max) {}
+
+		@media (max-width: $screen-sm-max) {}
+		h2 {
+			@media (max-width: $screen-xs-max) {}
+		}
+		.layer_cart_row {}
+		.button-container {
+			.btn {}
+			span.exclusive-medium {
+				i {}
+			}
+		}
+	}
+	.cross {
+		&:before {}
+		&:hover {}
+	}
+	.continue {}
+	p {}
+}
+/************************************************************************
+						Layer Cart Caroucel
+*************************************************************************/
+#layer_cart {
+	.crossseling {
+		.crossseling-content {}
+		h2 {}
+		#blockcart_list {
+			ul {
+				li {
+					.product-image-container {
+						img {}
+					}
+					.product-name {
+						a {}
+					}
+				}
+			}
+			a.bx-prev,
+			a.bx-next {
+				&:after {}
+				&:hover {}
+				&.disabled {}
+			}
+			a.bx-prev {
+				&:after {}
+			}
+			a.bx-next {
+				&:after {}
+			}
+			.bx-controls {}
+		}
+	}
+}

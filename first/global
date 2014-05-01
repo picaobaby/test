@@ -1,0 +1,1339 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+@import "compass";
+@import "compass/reset";
+@import "theme_variables";
+@import "bootstrap";
+@import "font-awesome";
+
+a:hover {
+}
+@media only screen and (min-width: 1200px) {
+  .container {}
+}
+body {
+  &.content_only {}
+}
+textarea {}
+
+//structure
+#header {}
+.columns-container {}
+#columns {}
+#index {
+  .tab-content {}
+}
+header {
+  .banner {
+    .row {}
+  }
+  .nav {
+    .row {}
+    nav {}
+  }
+  .row {
+    > .container {}
+    #header_logo {
+      @media (max-width: $screen-md) {}
+      @media (max-width: $screen-xs-max) {
+        img {}
+      }
+    }
+  }
+  @media (min-width: $screen-xs-max){
+    .col-sm-4 + .col-sm-4 + .col-sm-4 {}
+  }
+}
+.ie8 #header #header_logo {}
+
+//title
+#center_column {
+  .page_product_box {
+    h3 {}
+  }
+}
+
+//text
+p.info-title {}
+p.info-account {}
+.dark {}
+.main-page-indent {}
+.alert {
+  ul, ol {
+    li {}
+  }
+  &.alert-success {
+    &:before {}
+  }
+  &.alert-danger {
+    &:before {}
+  }
+}
+.label {}
+label {
+  &.required {
+    &:before {}
+  }
+}
+.unvisible {}
+.checkbox {
+  label {}
+}
+.close {
+  &:hover {}
+}
+
+//buttons
+input.button_mini,
+input.button_small,
+input.button,
+input.button_large,
+input.button_mini_disabled,
+input.button_small_disabled,
+input.button_disabled,
+input.button_large_disabled,
+input.exclusive_mini,
+input.exclusive_small,
+input.exclusive,
+input.exclusive_large,
+input.exclusive_mini_disabled,
+input.exclusive_small_disabled,
+input.exclusive_disabled,
+input.exclusive_large_disabled,
+a.button_mini,
+a.button_small,
+a.button,
+a.button_large,
+a.exclusive_mini,
+a.exclusive_small,
+a.exclusive,
+a.exclusive_large,
+span.button_mini,
+span.button_small,
+span.button,
+span.button_large,
+span.exclusive_mini,
+span.exclusive_small,
+span.exclusive,
+span.exclusive_large,
+span.exclusive_large_disabled {}
+
+*:first-child+html input.button_mini,
+*:first-child+html input.button_small,
+*:first-child+html input.button,
+*:first-child+html input.button_large,
+*:first-child+html input.button_mini_disabled,
+*:first-child+html input.button_small_disabled,
+*:first-child+html input.button_disabled,
+*:first-child+html input.button_large_disabled,
+*:first-child+html input.exclusive_mini,
+*:first-child+html input.exclusive_small,
+*:first-child+html input.exclusive,
+*:first-child+html input.exclusive_large,
+*:first-child+html input.exclusive_mini_disabled,
+*:first-child+html input.exclusive_small_disabled,
+*:first-child+html input.exclusive_disabled,
+*:first-child+html input.exclusive_large_disabled {}
+
+//hover button
+input.button_mini:hover,
+input.button_small:hover,
+input.button:hover,
+input.button_large:hover,
+input.exclusive_mini:hover,
+input.exclusive_small:hover,
+input.exclusive:hover,
+input.exclusive_large:hover,
+a.button_mini:hover,
+a.button_small:hover,
+a.button:hover,
+a.button_large:hover,
+a.exclusive_mini:hover,
+a.exclusive_small:hover,
+a.exclusive:hover,
+a.exclusive_large:hover {}
+
+//active button
+input.button_mini:active,
+input.button_small:active,
+input.button:active,
+input.button_large:active,
+input.exclusive_mini:active,
+input.exclusive_small:active,
+input.exclusive:active,
+input.exclusive_large:active,
+a.button_mini:active,
+a.button_small:active,
+a.button:active,
+a.button_large:active,
+a.exclusive_mini:active,
+a.exclusive_small:active,
+a.exclusive:active,
+a.exclusive_large:active {}
+
+input.button_disabled,
+input.exclusive_disabled,
+span.exclusive {}
+
+.btn.disabled,
+.btn[disabled]:hover {}
+.button.button-small {
+  span {
+    i {
+      &.right {}
+    }
+    &:hover {}
+  }
+}
+.button.button-medium {
+  span {
+    @media (max-width: $screen-xs) {
+    }
+    i {
+      &.left {
+        @media (max-width: $screen-xs) {}
+      }
+      &.right {
+        @media (max-width: $screen-xs) {}
+      }
+    }
+  }
+  &:hover {}
+}
+.button.button-medium.exclusive {
+  span {
+    &:hover {
+      span {}
+    }
+  }
+}
+.link-button {
+  i {
+    &.large {}
+  }
+}
+.btn.button-plus,
+.btn.button-minus {
+  span {
+  }
+  &:hover {
+    span {}
+  }
+}
+.button.exclusive-medium {
+  span {
+    @media (max-width: $screen-xs) {
+    }
+    &:hover {
+      span {}
+    }
+  }
+}
+.button.ajax_add_to_cart_button {
+  span {}
+  &:hover {
+    span {}
+  }
+}
+.button.lnk_view {
+  span {}
+  &:hover {
+    span {}
+  }
+  i.left {}
+}
+
+//form
+.form-control {
+  &.grey {}
+}
+
+//table
+table.std,
+table.table_block {}
+
+table.std th,
+table.table_block th {}
+
+table.std tr.alternate_item,
+table.table_block tr.alternate_item {}
+
+table.std td,
+table.table_block td {}
+.table {
+  > thead {
+    > tr {
+      > th {}
+    }
+  }
+  td {
+    a.color-myaccount {
+      &:hover {}
+    }
+  }
+  tfoot {
+    tr {}
+  }
+}
+
+//product elements
+.product-name {
+  a {
+    &:hover {}
+    @media (max-width: $screen-sm) {}
+  }
+}
+.price {}
+.price.product-price {}
+.old-price {}
+.old-price.product-price {}
+.special-price {}
+.price-percent-reduction {
+  &.small {}
+}
+
+//Labels New/Sale
+.new-box,
+.sale-box {}
+
+.new-box {}
+.sale-box {}
+.new-label {
+  &:before {}
+  &:after {}
+}
+.sale-label {
+  &:before {}
+  &:after {}
+}
+
+.ie8 {
+  .new-label {
+    &:after {}
+    &:before {}
+  }
+  .sale-label {
+    &:after {}
+    &:before {}
+  }
+  .new-box {}
+  .sale-box {}
+}
+
+//BOXES
+.box {
+  p {}
+  &.box-small {
+    .dark {}
+  }
+}
+.page-product-box {}
+.product-box {
+  .product-image {
+    img {}
+  }
+}
+
+//Homepage Tabs
+#home-page-tabs {
+  @media (min-width: $screen-sm) {}
+  > li {
+    @media (min-width: $screen-sm) {}
+    @media (max-width: $screen-xs - 1) {}
+    a {
+      @media (min-width: $screen-sm) {}
+    }
+    &:first-child {}
+  }
+  > li.active a,
+  >li a:hover {
+    @media (min-width: $screen-sm) {}
+  }
+}
+
+.block {
+  @media (max-width: $screen-xs-max) {}
+  .block_content {
+    @media (max-width: $screen-xs-max) {}
+  }
+}
+
+.block {
+  .title_block,
+  h4 {
+    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
+    @media (max-width: $screen-xs-max) {
+      &:after {}
+      &.active:after {}
+    }
+    a {
+      &:hover {}
+    }
+  }
+  .list-block {
+    @media (max-width: $screen-xs-max) {}
+    li {
+      a {
+        i {}
+        &:before {}
+        &:hover {}
+      }
+      &:first-child {}
+    }
+    .form-group {
+      select {
+        @media (max-width: $screen-xs-max) {}
+      }
+    }
+    .btn {}
+  }
+  .products-block {
+    li {
+      .products-block-image {
+        @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
+      }
+      .product-content {
+        h5 {}
+      }
+    }
+    .product-name {}
+    .product-description {}
+    .price-percent-reduction {}
+  }
+}
+.page-heading {
+  span.heading-counter {
+    @media (max-width: $screen-xs) {}
+  }
+  span.lighter {}
+  &.bottom-indent {}
+  &.product-listing {}
+}
+.page-subheading {}
+h3.page-product-heading {}
+
+// BLOCK .footer_links (cms pages)
+ul.footer_links {
+  li {
+    &+li {}
+  }
+}
+
+// barre comparaison / tri
+.content_sortPagiBar {
+  .sortPagiBar {
+    #productsSortForm {
+      select {
+        @media (max-width: $screen-sm-max) {}
+      }
+      .selector {}
+    }
+    .nbrItemPage {
+      select {}
+      .clearfix > span {}
+      #uniform-nb_item {}
+    }
+    label,
+    select {}
+    label {}
+    &.instant_search {
+      #productsSortForm {}
+    }
+  }
+  .display,
+  .display_m {
+    li {
+      a {
+        i {}
+        &:hover {
+          i {}
+        }
+      }
+      &.selected {
+        a {}
+        i {}
+      }
+      &.display-title {}
+    }
+  }
+}
+
+//pagination
+.top-pagination-content,
+.bottom-pagination-content {
+  div.pagination {
+    @media (min-width: $screen-md) and (max-width: $screen-md-max) {}
+    @media (max-width: $screen-sm-max) {}
+    .showall {
+      @media (min-width: $screen-md) and (max-width: $screen-md-max) {}
+      @media (max-width: $screen-sm-max) {}
+      .btn {
+        span {}
+      }
+    }
+  }
+  ul.pagination {
+    @media (max-width: $screen-sm-max) {}
+    li {
+      > a,
+      > span {
+          span {}
+      }
+      > a:hover {
+        span {}
+      }
+      &.pagination_previous,
+      &.pagination_next {
+        > a,
+        > span {
+          @media (max-width: $screen-xs-max) {
+            b {}
+          }
+          span {
+            b {}
+          }
+        }
+      }
+      &.pagination_previous {}
+      &.pagination_next {}
+      &.active {
+        > span {
+          span {}
+        }
+      }
+    }
+  }
+  .compare-form {
+    @media (max-width: $screen-xs - 1) {}
+  }
+  .product-count {
+    @media (max-width: $screen-sm-max) {}
+  }
+}
+
+.bottom-pagination-content {}
+
+//CART steps
+ul.step {
+  @media (min-width: $screen-sm) {}
+  li {
+    @media (max-width: $screen-sm - 1) {}
+    a,
+    span,
+    &.step_current span,
+    &.step_current_end span {
+      @media (max-width: $screen-md) {}
+      @media (min-width: $screen-md) {
+        &:after {}
+      }
+      &:focus {}
+    }
+    &.first {
+      @media (min-width: $screen-sm) {}
+      span,
+      a {
+        @media (min-width: $screen-sm) {}
+      }
+    }
+    &.second {
+      span, a {}
+    }
+    &.third {
+      span, a {}
+    }
+    &.four {
+      span, a {}
+    }
+    &.last {
+      span {}
+      @media (min-width: $screen-sm) {
+        span {}
+      }
+    }
+    &.step_current {
+      span {
+        @media (min-width: $screen-md) {
+          &:after {}
+        }
+      }
+    }
+    &.step_current_end {}
+    &.step_todo {
+      span {
+        @media (min-width: $screen-md) {
+          &:after {}
+        }
+      }
+    }
+    &.step_done {
+      a {
+        @media (min-width: $screen-md) {
+          &:after {}
+        }
+      }
+    }
+    &.step_done.step_done_last {
+      @media (min-width: $screen-md) {
+        a:after {}
+      }
+    }
+    &#step_end {
+      span {
+        @media (min-width: $screen-md) {
+          &:after {}
+        }
+      }
+    }
+    em {
+      @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
+    }
+  }
+}
+
+// module productcomments
+.rating {}
+.rating:after {}
+.cancel, .star {}
+.cancel, .cancel a {}
+.cancel a, .star a {}
+div.star_on a {}
+div.star_hover a,
+div.star a:hover {}
+.pack_content {}
+.confirmation {}
+#page .rte {}
+.listcomment {}
+.listcomment li {}
+.listcomment .titlecomment {}
+.listcomment .txtcomment {}
+.header-container {}
+
+// BREADCRUMB
+.breadcrumb {
+  .navigation-pipe {}
+  a {
+    &.home {
+      i {}
+      &:before {}
+    }
+    &:after {}
+    &:before {}
+    &:hover {}
+  }
+}
+
+.ie8 {
+  .breadcrumb {
+    a:after {}
+    .navigation-pipe {}
+  }
+}
+
+// FOOTER
+.footer-container {
+  @media (min-width: $screen-sm) {}
+  .container {}
+  #footer {
+    .row {}
+    .footer-block {
+      @media (max-width: $screen-xs-max) {}
+    }
+    a {
+      &:hover {}
+    }
+    h4 {
+      @media (max-width: $screen-xs-max) {
+        &:after {}
+        &.active:after {}
+      }
+      a {}
+    }
+    ul {
+      li {
+        a {}
+      }
+    }
+    #block_contact_infos {
+      @media (max-width: $screen-xs-max) {}
+      > div {
+        @media (max-width: $screen-xs-max) {}
+        ul {
+          li {
+            > span,
+            > span a {}
+            i {}
+          }
+        }
+      }
+    }
+    .blockcategories_footer {}
+    #social_block {
+      @media (max-width: $screen-xs-max) {}
+      ul {
+        @media (max-width: $screen-xs-max) {}
+        li {
+          @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
+          a {
+            @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
+            span {}
+            &:before {}
+            &:hover {}
+          }
+          &.facebook {
+            a {
+              &:before {}
+            }
+          }
+          &.twitter {
+            a {
+              &:before {}
+            }
+          }
+          &.rss {
+            a {
+              &:before {}
+            }
+          }
+          &.youtube {
+            a {
+              &:before {}
+            }
+          }
+          &.google-plus {
+            a {
+              &:before {}
+            }
+          }
+          &.pinterest {
+            a {
+              &:before {}
+            }
+          }
+        }
+      }
+      h4 {
+        @media (max-width: $screen-xs-max) {}
+      }
+    }
+    .bottom-footer {
+      div {}
+    }
+  }
+}
+
+#reinsurance_block {}
+
+// Make sure lists are correctly displayed in tinyMCE BO edition mode too
+#short_description_content ul,
+#short_description_content ol,
+#short_description_content dl,
+#tinymce ul,
+#tinymce ol,
+#tinymce dl {}
+
+.rte ul {}
+.rte ol {}
+.block_hidden_only_for_screen {}
+
+// PAIMENT - PAGE ORDER
+
+//nav bottom
+.cart_navigation {
+  .button-medium {
+    span {
+      @media (max-width: $screen-md) {}
+    }
+    i.right {}
+  }
+  .button-exclusive {
+    i {}
+    &:hover, &:focus, &:active {}
+  }
+  @media (max-width: $screen-xs) {
+    > span {}
+  }
+}
+
+// step 1 - cart
+.cart_last_product {}
+.cart_quantity .cart_quantity_input {}
+.cart_gift_quantity .cart_quantity_input {}
+.table {
+  tbody > tr > td {
+    &.cart_quantity {
+      .cart_quantity_button {
+        a {
+          &+ a {}
+        }
+      }
+    }
+    &.cart_delete,
+    &.price_discount_del {}
+  }
+  tfoot > tr > td {}
+}
+.cart_delete a.cart_quantity_delete,
+a.price_discount_delete {
+  &:hover {}
+}
+#cart_summary {
+  tbody {
+    td {
+      &.cart_product {
+        img {}
+      }
+      &.cart_unit {
+        .price {
+          span {
+            &.price-percent-reduction {}
+            &.old-price {}
+          }
+        }
+      }
+      &.cart_description {
+        small {}
+      }
+      &.cart_avail {}
+    }
+  }
+  tfoot {
+    td {
+      &.text-right {}
+      &.price {}
+      &.total_price_container {
+        span {}
+      }
+      &#total_price_container {}
+    }
+  }
+}
+#cart_summary .stock-management-on {
+  tbody {
+    td {
+      &.cart_description {}
+    }
+  }
+}
+@media (max-width: $screen-xs-max) {
+  #order-detail-content {
+    #cart_summary {
+      table, thead, tbody, th, td, tr {}
+      thead tr {}
+      tr {}
+      td {
+        &.cart_product {}
+        &.cart_description {}
+        &.cart_avail {}
+        &.cart_unit {}
+        &.cart_quantity {}
+        &.cart_total {}
+        &.cart_delete {
+          &:before {}
+        }
+        div {}
+      }
+      td:before {}
+      tfoot {
+        td {
+          &:before {}
+        }
+        tr {
+          .text-right, .price {}
+        }
+      }
+    }
+  }
+}
+@media (max-width: $screen-sm) {
+  #order-detail-content {
+    #cart_summary {
+      tbody {
+        td {
+          .price {}
+          &.cart_description {}
+        }
+      }
+    }
+  }
+}
+.cart_voucher {
+  h4 {}
+  .title-offers {}
+  fieldset {
+    #discount_name {}
+  }
+  #display_cart_vouchers {
+    span {
+      &:hover {}
+    }
+  }
+}
+.enable-multishipping {
+  label {}
+}
+#HOOK_SHOPPING_CART {
+  #loyalty {
+    i {}
+  }
+}
+#order_carrier {}
+#order_carrier .title_block {}
+#order_carrier span {}
+.multishipping_close_container {}
+table#cart_summary .gift-icon {}
+
+// step 3 - address
+#multishipping_mode_box {
+  .title {}
+  .description_off {
+    div {}
+  }
+  .description_off a:hover,
+  .description a:hover {}
+}
+#multishipping_mode_box.on .description_off {}
+.multishipping-cart {
+  .cart_address_delivery {
+    &.form-control {}
+  }
+}
+#order .address_add.submit {}
+#ordermsg {}
+#id_address_invoice.form-control,
+#id_address_delivery.form-control {}
+.addresses {
+  .select label,
+  .selector,
+  .addresses .address_select {}
+  .waitimage {}
+  .checkbox.addressesAreEquals {}
+}
+
+// step 4 - paiement
+#order .delivery_option,
+#order-opc .delivery_option {
+  > div {
+    > table {
+      &.resume {
+        &.delivery_option_carrier {
+          td {
+            i {}
+          }
+        }
+        td {
+          &.delivery_option_radio {}
+          &.delivery_option_logo {}
+          &.delivery_option_price {}
+        }
+      }
+    }
+  }
+}
+
+.order_carrier_content {
+  .carrier_title {}
+  .checkbox {
+    input {}
+  }
+  .delivery_options_address {
+    .carrier_title {}
+  }
+  & + div {}
+}
+#carrierTable {}
+#carrierTable tbody {}
+#carrierTable th {}
+#carrierTable td {}
+#carrierTable td.carrier_price {}
+p.checkbox.gift {}
+#gift_div {}
+a.iframe {
+  &:hover {}
+}
+
+//step 5 - paiement
+p.payment_module {
+  a {
+    &.bankwire {}
+    &.cheque {}
+    &.cash {}
+    &.cheque, &.bankwire, &.cash {
+      &:after {}
+    }
+    &:hover {}
+    span {}
+  }
+}
+.payment_module.box {}
+p.cheque-indent {}
+.cheque-box {
+  .form-group {
+    .form-control {}
+  }
+}
+.order-confirmation.box {
+  a {
+    &:hover {}
+  }
+}
+
+//PAGE ORDER-OPC
+.delivery_option_carrier td {}
+.delivery_option_carrier td + td {}
+.delivery_option_carrier td + td + td {}
+.delivery_option_carrier tr td {}
+.delivery_option_carrier.selected {}
+.delivery_option_carrier.not-displayable {}
+
+//PAGES ADRESSES, IDENTITY
+#address,
+#identity,
+#account-creation_form,
+#new_account_form,
+#opc_account_form,
+#authentication {
+  .box {}
+  p.required {}
+  p.inline-infos {}
+  .form-group {
+    .form-control {
+      &#adress_alias {}
+    }
+    &.phone-number {
+      @media (min-width: $screen-lg) {}
+      + p {
+        @media (min-width: $screen-lg) {} }
+    }
+  }
+  .gender-line {
+    > label {} .radio-inline {
+      label {} }
+  }
+}
+
+#identity,
+#authentication,
+#order-opc {
+  #center_column {
+    form.std {
+      .row {
+        .col-xs-4 {
+          .form-control {} }
+      }
+    }
+    .footer_links {}
+  }
+}
+
+#new_account_form .box {
+  .date-select {}
+  .top-indent {}
+  .customerprivacy {}
+}
+
+#authentication {
+  fieldset.account_creation {}
+}
+
+// PASSWORD
+#password {
+  .box {
+    p {}
+    .form-group {
+      .form-control {}
+    }
+  }
+  .footer_links {}
+}
+
+//PAGE SEARCH
+#instant_search_results {
+  a.close {
+    &:hover {}
+  }
+}
+
+// MANUFACTURERS/SUPPLIERS
+#manufacturers_list,
+#suppliers_list {
+  h3 {}
+  .description {}
+  .product-counter {
+    a {
+      &:hover {}
+    }
+  }
+  &.list {
+    li {
+      .mansup-container {
+        @media (max-width: $screen-xs-max) {}
+      }
+      &:first-child {
+        .mansup-container {}
+      }
+      .left-side {}
+      h3 {}
+      .middle-side {
+        @media (max-width: $screen-xs-max) {}
+      }
+      .right-side-content {
+        @media (max-width: $screen-xs-max) {}
+        .product-counter {
+          @media (max-width: $screen-xs-max) {}
+        }
+      }
+    }
+  }
+  &.grid {
+    li {
+      .product-container {
+        .left-side {}
+        h3 {}
+        .product-counter {}
+      }
+    }
+    @media (min-width: $screen-lg) {
+      li.first-in-line {}
+      li.last-line {
+        .product-container {}
+      }
+    }
+    @media (min-width: $screen-sm) and (max-width: $screen-md-max) {
+      li.first-item-of-tablet-line {}
+      li.last-tablet-line {
+        .product-container {}
+      }
+    }
+    @media (max-width: $screen-xs-max) {
+      li.item-last {}
+      .product-container {}
+    }
+  }
+}
+
+#manufacturer,
+#supplier {
+  .description_box {
+    .hide_desc {}
+  }
+  .bottom-pagination-content,
+  .top-pagination-content {}
+  .top-pagination-content.bottom-line {}
+}
+
+//DISCOUNT PAGE
+table.discount {
+  i {
+    &.icon-ok {}
+    &.icon-remove {}
+  }
+}
+
+//GUEST TRACKING
+#guestTracking {
+  .form-control {}
+  @media (min-width: $screen-lg) {
+    .form-group {
+      i {}
+    }
+    .form-control {}
+    label {}
+  }
+}
+
+//PAGE 404
+#pagenotfound {
+  .pagenotfound {
+    .img-404 {
+      img {}
+    }
+    h1 {}
+    p {}
+    h3 {}
+    label {
+      @media (max-width: $screen-xs-max) {}
+    }
+    .form-control {
+      @media (max-width: $screen-xs-max) {}
+    }
+    .buttons {
+      .button-medium {
+        i.left {}
+      }
+    }
+  }
+}
+
+//addon RerversoForm
+#account-creation_form fieldset.reversoform {}
+#account-creation_form fieldset.reversoform .text label {}
+#account-creation_form fieldset.reversoform .infos-sup {}
+
+//addon customer privacy
+#account-creation_form fieldset.customerprivacy label,
+fieldset.customerprivacy label {}
+
+//addon referralprogram
+.tab-content {}
+
+//addons comments products
+form#sendComment fieldset {}
+form#sendComment h3 {}
+#new_comment_form p.text {}
+#sendComment p.text label,
+#sendComment p.textarea label {}
+#sendComment p.text input {}
+#sendComment p.textarea textarea {}
+#sendComment p.submit {}
+#sendComment p.closeform {}
+.star {}
+.star {
+  a {}
+}
+div.star {
+  &:after {}
+}
+div.star.star_on {
+  &:after {}
+}
+
+div.star.star_hover {
+  &:after {}
+}
+
+//CSS Modules
+//IMPORTANT - Internet Explorer can read 31 CSS files max. Some CSS have been put here and erased from their own module folder.
+
+//Block ADVERTISING
+.advertising_block {}
+
+//footer
+.blockcategories_footer ul ul {}
+
+//Form validate
+.form-group {
+  &.form-error {
+    input, textarea {}
+  }
+  &.form-ok {
+    input, textarea {}
+  }
+  &.form-error, &.form-ok {
+    .form-control {}
+  }
+}
+
+//uniform
+.radio-inline, .checkbox {
+  .checker {
+    span {}
+  }
+  div.radio {
+    span {}
+  }
+}
+.fancybox-skin {}
+.fancybox-skin .fancybox-close {
+  &:hover {}
+  &:after {}
+}
+
+//Homepage pre-footer
+#facebook_block,
+#cmsinfo_block {
+  @media (max-width: $screen-sm-max) {}
+  @media (max-width: $screen-xs-max) {}
+}
+#facebook_block {
+  h4 {
+    @media (max-width: $screen-sm-max) {}
+    @media (max-width: $screen-xs-max) {}
+    @media (max-width: $screen-sm) {}
+  }
+  .facebook-fanbox {}
+}
+
+#cmsinfo_block {
+  @media (max-width: $screen-xs-max) {}
+  > div {
+    @media (max-width: $screen-xs-max) {}
+    @media (max-width: $screen-xs - 1) {}
+  }
+  > div + div {
+    @media (max-width: $screen-xs - 1) {}
+  }
+  em {
+    @media (max-width: $screen-sm-max) {}
+  }
+  .type-text {}
+  h3 {
+    @media (max-width: $screen-md-max) {}
+  }
+  ul {
+    li {
+      @media (max-width: $screen-md-max) {}
+      @media (max-width: $screen-sm-max) {}
+    }
+  }
+  p {
+    em {}
+  }
+}
+
+.ie8 {
+  #facebook_block,
+  #cmsinfo_block {}
+}
+
+//Zoom
+@media (max-width: $screen-md-max) {
+  .zoomdiv {}
+}
+
+//temporary fix for quickview
+#product.content_only {
+  div.pb-left-column {
+    p.resetimg {}
+    #thumbs_list_frame {}
+  }
+}
+
+//Product Compare
+#product_comparison {
+  td.compare_extra_information {}
+  #social-share-compare {}
+}
+
+//Social Sharing
+.btn-facebook, .btn-twitter, .btn-google-plus, .btn-pinterest {
+  &:hover {}
+}
+
+.btn-facebook {
+  i {}
+  &:hover {
+    i {}
+  }
+}
+
+.btn-twitter {
+  i {}
+  &:hover {
+    i {}
+  }
+}
+
+.btn-google-plus {
+  i {}
+  &:hover {
+    i {}
+  }
+}
+
+.btn-pinterest {
+  i {}
+  &:hover {
+    i {}
+  }
+}

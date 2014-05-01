@@ -1,0 +1,46 @@
+// topmenu ???
+
+@import "compass";
+@import "theme_variables";
+
+#categories_block_top {
+  .sf-menu {
+    > li {
+      > ul {
+        > li {}
+        > .category_thumb {
+          img {}
+        }
+      }
+      h4 {
+        a {
+          &:before {}
+        }
+      }
+      .main-level-submenus {}
+    }
+    .category_thumb {}
+  }
+}
+
+#categories_block_left {
+  .block_content > ul {}
+  li {
+    a {}
+    span.grower {
+      &.OPEN,
+      &.CLOSE {
+        &:before {}
+      }
+      &.CLOSE:before {}
+    }
+    & span.grower:hover + a,
+    a:hover,
+    a.selected {}
+    li {
+      a {
+        &:before {}
+      }
+    }
+  }
+}

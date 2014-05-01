@@ -1,0 +1,35 @@
+@import "compass";
+@import "theme_variables";
+
+/********************************************************
+      One-Page Checkout Styles
+********************************************************/
+#order-opc {
+  .box {}
+  .cart_navigation {}
+  .page-heading.step-num {
+    span {}
+  }
+  .form-group { 
+      .form-control {}
+  }
+  .lost_password {
+    &:hover {}
+  }
+  .title_block {}
+  .opc-button {}
+  ul.bullet {}
+  .date-select {}
+  .opc-add-save {}
+  #message {}
+  #opc_payment_methods {
+    p.warning{}
+  }
+  #opc_account {}
+  .address_delivery.select {}
+  #address_invoice_form.form-group {}
+}
+
+#new_account_form .id_state, 
+#new_account_form .dni, 
+#new_account_form .postcode {}

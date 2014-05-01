@@ -1,0 +1,23 @@
+@import "compass";
+@import "theme_variables";
+
+#account-creation_form .id_state,
+#account-creation_form .dni,
+#account-creation_form .postcode {}
+
+#create-account_form {
+  p {}
+  .form-group {}
+}
+#login_form {
+  .form-group {
+    &.lost_password {
+      a {
+        &:hover {}
+      }
+    }
+  }
+}
+#login_form, #create-account_form {
+  .form-control {}
+}

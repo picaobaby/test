@@ -1,0 +1,104 @@
+// Two scss files, inside blockxxx/css folder 
+// 1. blocktopmenu.scss
+// 2. superfish-modified.scss
+
+
+
+// 1. ============
+@import "compass";
+@import "theme_variables";
+
+#block_top_menu {}
+
+
+
+
+
+// 2. ============
+@import "compass";
+@import "theme_variables";
+
+/*** ESSENTIAL STYLES ***/
+.sf-contener {
+}
+.sf-right {}
+.sf-menu,
+.sf-menu * {}
+.sf-menu {
+  @media (max-width: $screen-xs-max) {}
+}
+.sf-menu ul {
+  @media (max-width: $screen-xs-max) {}
+}
+.sf-menu ul li {}
+.sf-menu li:hover {}
+.sf-menu > li {
+  @media (max-width: $screen-xs-max) {
+    span {
+      &:after {
+      }
+      &.active {
+        &:after {}
+      }
+    }
+  }
+  > a {}
+  &.sfHover > a,
+  > a:hover,
+  &.sfHoverForce > a {}
+}
+.sf-menu li li li a {
+  &:before {}
+  &:hover {}
+}
+.sf-menu li ul {
+  @media (max-width: $screen-xs-max) {}
+}
+.sf-menu li li ul {}
+.sf-menu li li li ul {}
+.sf-menu li li li ul {}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {}
+.sf-menu > li > ul {
+  > li {
+    > a {
+      &:hover {}
+    }
+  }
+}
+.sf-menu > li > ul > li {
+  @media (max-width: $screen-xs-max) {}
+  @media (max-width: $screen-xs - 1) {}
+  @media (min-width: $screen-sm) { 
+    &.first-in-line-lg {}
+  }
+  @media (min-width: $screen-xs) and (max-width: $screen-xs-max) { 
+    &.first-in-line-xs {}
+  }
+}
+.sf-menu > li > ul > li#category-thumbnail {
+  > div {
+    @media (max-width: $screen-xs - 1) {}
+    &:first-child {}
+    img {}
+  }
+}
+.cat-title {
+  @media (max-width: $screen-xs-max) { 
+    &:hover {}
+    &:after {}
+    &.active:after{}
+  }
+}
+
+.sf-menu {
+  li.sf-search{
+    input{}
+  }
+}

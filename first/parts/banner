@@ -1,0 +1,2 @@
+#header .banner a {}		// banner img link
+#header .banner a img {}  	// banner img image

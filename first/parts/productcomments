@@ -1,0 +1,106 @@
+@import "compass";
+@import "theme_variables";
+
+#product_comments_block_extra {
+  .comments_note {}
+  .comments_note span,
+  .star_content {}
+  .star_content {}
+  div.star {
+    &:after {}
+  }
+  div.star_on {
+    &:after {}
+  } 
+  .comments_advices {}
+}
+
+.comments_advices {
+  li{
+    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
+  }
+  a {  
+    @media (min-width: $screen-sm) and (max-width: $screen-md-max) {}
+    &:before{ 
+      @media  (max-width: $screen-md-max) {}
+    }
+    &.reviews:before{}
+    &.open-comment-form:before{}
+    &:hover {}
+    &.reviews{
+      @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {}
+    }
+  }
+}
+
+
+/* pop-in add grade/advice ********************************************************************* */
+#fancybox-wrap {}
+#fancybox-content {}
+#new_comment_form {
+  h2{}
+  .title {}
+  ul.grade_content {
+    li{}
+    span{}
+    .cancel {}
+  }      
+  .product {
+    img{}
+    .product_desc {                 
+      .product_name {}
+    }
+  }   
+  .new_comment_form_content {
+    @media (max-width: $screen-xs-max) { 
+    }
+    .intro_form {}
+  }     
+  label {}
+  input,
+  textarea  {}
+  textarea {}
+  .submit {}
+
+  #criterions_list {
+    li{}
+    label {}
+    .star_content {}
+  }
+  #new_comment_form_footer {}
+}
+/* TAB COMMENTS ******************************************************************************** */
+#product_comments_block_tab {
+  div.comment {
+    &:first-child{}
+    .comment_author {   
+      span{}
+      .star_content {}
+    }
+    .comment_details {
+      @media (max-width: $screen-sm-max) { 
+        ul {
+          li {
+            &:before{}
+          }
+        }         
+      }
+    }     
+  }
+  div.star {
+    &:after {}
+  }
+  div.star_on {
+    &:after {}
+  }
+  .comment_author_infos {
+    strong{}
+    em {}
+  } 
+  a {}
+
+  span.report_btn {}
+  span.report_btn:hover {}
+}
+.fl {}
+.fr {}

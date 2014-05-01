@@ -1,0 +1,15 @@
+@import "compass";
+@import "theme_variables";
+
+#my-account {
+  .addresses-lists {}
+  ul.myaccount-link-list {
+    li {
+      a {
+        i {}
+        span {}
+        &:hover {}
+      }
+    }
+  }
+}

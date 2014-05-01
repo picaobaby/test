@@ -1,0 +1,24 @@
+@import "compass";
+@import "theme_variables";
+
+#favoriteproducts_block_account{
+  .favoriteproduct {
+    a.product_img_link {}
+    p.product_desc {}
+    .remove {
+      .icon {}
+    }
+  }
+} 
+
+/* lnk fiche produit */
+#usefull_link_block {
+  li{
+    &#favoriteproducts_block_extra_add, 
+    &#favoriteproducts_block_extra_remove,
+    &#favoriteproducts_block_extra_added,
+    &#favoriteproducts_block_extra_removed{}
+    &#favoriteproducts_block_extra_added {}
+    &#favoriteproducts_block_extra_removed {}
+  }
+}

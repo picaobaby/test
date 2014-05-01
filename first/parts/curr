@@ -1,0 +1,25 @@
+@import "compass";
+@import "theme_variables";
+
+#currencies-block-top {
+  @media (max-width: $screen-xs - 1) {}
+  span.firstWord {}
+  div.current {
+    @media (max-width: $screen-xs - 1) {}
+    strong {}
+    &:hover, &.active {}
+    &:after {
+      @media (max-width: $screen-xs - 1) {}
+    }
+    .cur-label {
+      @media (max-width: $screen-xs - 1) {}
+    }
+  }
+  ul {
+    li {
+      a,
+      > span {}
+      &.selected, &:hover a {}
+    }
+  }
+}

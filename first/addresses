@@ -1,0 +1,18 @@
+@import "compass";
+@import "theme_variables";
+
+#addresses {
+  #center_column {
+    .page-heading {}
+    p {
+      &.p-indent {}
+    }
+  }
+}
+.address {
+  li {
+    &.address_update {
+      a {}
+    }
+  }
+}

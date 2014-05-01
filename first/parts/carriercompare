@@ -1,0 +1,40 @@
+@import '../../_theme_variables';
+
+#compare_shipping {
+  .form-group {
+    label {}
+    .form-control {}
+    &.last {}
+  }
+  
+  .table {
+    thead {
+      tr {
+        th {}
+      }
+    }
+    tbody {
+      td {
+        &.carrier_action {
+          input {}
+        }
+      } 
+    }
+  }
+}
+#availableCarriers {
+  .table {}
+}
+#compare_shipping ul#carriercompare_errors_list {}
+#compare_shipping_form {}
+#compare_shipping ul#carriercompare_errors_list li {}
+
+#SE_AjaxDisplay{}
+
+#SE_AjaxDisplay img{}
+.SE_SubmitRefreshCard {
+  button {
+    &#carriercompare_submit {}
+  } 
+}
+#carriercompare_errors {}

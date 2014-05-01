@@ -1,0 +1,45 @@
+@import "compass";
+@import "theme_variables";
+
+.content_scene_cat {
+  .content_scene_cat_bg {
+    @media  (max-width: $screen-md-max) {}
+  }
+  span.category-name {
+    @media  (max-width: $screen-md-max) {}
+  }
+  p {}
+  a {
+    &:hover {}
+  }
+  .content_scene {
+    .cat_desc {
+      a {
+        &:hover {}
+      }
+    }
+  }
+}
+
+
+#subcategories {
+  p.subcategory-heading {}
+  ul {
+    li {
+      .subcategory-image {
+        a {
+          img {}
+        }
+      }
+      .subcategory-name {
+        &:hover {}
+      }
+      .cat_desc {}
+      &:hover {
+        .subcategory-image {
+          a {}
+        } 
+      }
+    }
+  }
+}

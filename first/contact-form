@@ -1,0 +1,26 @@
+@import "compass";
+@import "theme_variables";
+
+.contact-title {
+  i {}
+}
+.contact-form-box {
+  fieldset {}
+  label {}
+  .page-subheading {}
+  .col-md-3 {
+    @media (max-width: $screen-sm-max) {}
+  }
+  .col-md-9 {
+    @media (max-width: $screen-sm-max) {}
+  }
+  #desc_contact0 {}
+  .form-group {}
+  textarea {}
+  .submit {}
+  select.form-control {}
+  input.form-control {}
+  @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+    div.uploader span.filename {}
+  }
+}

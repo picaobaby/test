@@ -1,0 +1,42 @@
+@import "compass";
+@import "theme_variables";
+
+#cms {
+  #center_column {
+    .block-cms {}
+    h1 {}
+    h3 {}
+    p {}
+    .list-1 {
+      li {
+        &:first-child {}
+        em {}
+      }
+    }
+    img {}
+    .testimonials {
+      .inner {
+        span {
+          &.before {}
+          &.after {}
+        }
+      }
+      &:after {}
+      & + p {}
+    }
+    p.bottom-indent {}
+    #admin-action-cms{
+      p{
+        span{}
+        .button{
+          &.publish_button{
+            &:hover{}
+          }
+          &.lnk_view{
+            &:hover{}
+          }
+        }
+      }
+    }
+  }
+}
