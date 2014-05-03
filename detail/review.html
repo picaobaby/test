@@ -1,0 +1,79 @@
+<section class="page-product-box">
+   <h3 id="#idTab5" class="idTabHrefShort page-product-heading">Reviews</h3>
+   
+   <!-- existing reviews -->
+   <div id="idTab5">
+      <div id="product_comments_block_tab">
+         <p class="align_center">No customer comments for the moment.</p>
+      </div>
+   </div>
+
+   <!-- review form -->
+   <div style="display: none;">
+      <div id="new_comment_form">
+
+         <form id="id_new_comment_form" action="#">
+            <h2 class="page-subheading"> Write a review </h2>
+            <div class="row">
+
+               <!-- (LEFT) -->
+               <div class="product clearfix  col-xs-12 col-sm-6">
+                  <img src="http://127.0.0.1/test_prestashop/10-medium_default/printed-dress.jpg" height="125" width="125" alt="Printed Dress" />
+                  <div class="product_desc">
+                     <p class="product_name"> <strong>Printed Dress</strong> </p>
+                     <p>Printed evening dress with straight sleeves with black thin waist belt and ruffled linings.</p>
+                  </div>
+               </div>
+
+               <!-- (RIGHT) -->
+               <div class="new_comment_form_content col-xs-12 col-sm-6">
+                  <h2>Write a review</h2>
+
+                  <!-- error -->
+                  <div id="new_comment_form_error" class="error" style="display: none; padding: 15px 25px">
+                     <ul></ul>
+                  </div>
+                  
+                  <!-- stars -->
+                  <ul id="criterions_list">
+                     <li>
+                        <label>Quality:</label>
+                        <div class="star_content">
+                           <input class="star" type="radio" name="criterion[1]" value="1" />
+                           <input class="star" type="radio" name="criterion[1]" value="2" />
+                           <input class="star" type="radio" name="criterion[1]" value="3" checked="checked" />
+                           <input class="star" type="radio" name="criterion[1]" value="4" />
+                           <input class="star" type="radio" name="criterion[1]" value="5" />
+                        </div>
+                        <div class="clearfix"></div>
+                     </li>
+                  </ul>
+
+                  <!-- title -->
+                  <label for="comment_title"> Title: <sup class="required">*</sup> </label>
+                  <input id="comment_title" name="title" type="text" value=""/>
+                  
+                  <!-- comment -->
+                  <label for="content"> Comment: <sup class="required">*</sup> </label>
+                  <textarea id="content" name="content"></textarea>
+                  
+                  <!-- footer (req, buttons) -->
+                  <div id="new_comment_form_footer">
+                     <input id="id_product_comment_send" name="id_product" type="hidden" value='4' />
+                     <p class="fl required"><sup>*</sup> Required fields</p>
+                     <p class="fr">
+                        <button id="submitNewMessage" name="submitMessage" type="submit" class="btn button button-small">
+                           <span>Send</span>
+                        </button>&nbsp;
+                        or&nbsp;
+                        <a class="closefb" href="#"> Cancel </a>
+                     </p>
+                     <div class="clearfix"></div>
+                  </div>
+
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</section>
