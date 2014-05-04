@@ -1,1 +1,36 @@
-// empty 
+/* Block newsletter */
+#columns #newsletter_block_left {
+	.form-group {
+		.form-control {
+			@media (min-width: $screen-sm) and (max-width: $screen-md-max) {}
+		}
+	}
+	.success_inline, .warning_inline {}
+	.success_inline	{}
+	.warning_inline {}
+}
+
+/* Block newsletter footer */
+#footer {
+	#newsletter_block_left {
+		@media (max-width: $screen-xs-max) {}
+		h4 {
+			&:after {}
+		}
+		.block_content {}
+		.form-group {
+			.form-control {
+				&:focus {}
+			}
+			.button-small {
+				&:before {}
+				&:hover {}
+				span{}
+			}
+		}
+		.warning_inline {
+			@media (min-width: $screen-lg) {}
+		}
+		.newsletter-input {}
+	}
+}
