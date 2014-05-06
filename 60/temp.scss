@@ -680,6 +680,43 @@ body {}
 // -----------------------------------------------------------
 //  ## 18  
 // -----------------------------------------------------------
+body {}
+.container {
+  .vnav {}
+}
+.vnav {
+  a {}
+  li:last-child {
+    .vnav-item {}
+    .vnav-subnav {}
+  }
+}
+.vnav-item {
+  &:hover {}
+  .active &, &:active {
+    .vnav-counter {}
+  }
+  i {}
+}
+.vnav-counter {}
+.vnav-subnav {
+  .active & {}
+  a {
+    &:before {}
+    &:hover {}
+  }
+  .vnav-counter {}
+  li:last-child a {}
+}
+
+$icons: ('friends', 0 0),
+        ('video', -20px 0),
+        ('photo', -40px 0),
+        ('podcast', -60px 0);
+[class*="icon-"] {}
+@each $pair in $icons {
+  .icon-#{nth($pair, 1)} { background-position: nth($pair, 2); }
+}
 
 
 
@@ -692,6 +729,42 @@ body {}
 // -----------------------------------------------------------
 //  ## 19  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.container {}
+.cal {
+  &:before {}
+  a {}
+  tr:first-child td {}
+  td:first-child {}
+  tr:first-child a {}
+  tr:last-child a {}
+  td:first-child a {}
+  td:last-child a {}
+  tr:last-child td:first-child a {}
+  tr:last-child td:last-child a {}
+}
+.cal-table {}
+.cal-caption {
+  a {}
+  .prev {}
+  .next {}
+}
+.cal-body {
+  td {}
+  a {}
+  a:hover {}
+}
+.cal-off a {}
+.cal-today a {}
+.cal-selected a, .cal-body a:active {}
+.cal-check a {
+  &:before {}
+}
+.lt-ie8 {
+  .cal-table {}
+  .cal-body a {}
+}
 
 
 
@@ -704,6 +777,13 @@ body {}
 // -----------------------------------------------------------
 //  ## 20  
 // -----------------------------------------------------------
+body {}
+.container {}
+.nav-item {}
+.nav-link {
+  &:hover {}
+  &:active {}
+}
 
 
 
@@ -716,6 +796,28 @@ body {}
 // -----------------------------------------------------------
 //  ## 21  
 // -----------------------------------------------------------
+body {}
+.container {}
+.switch {}
+.switch-label {
+  &:active {}
+}
+.switch-label-off {}
+.switch-label-on {}
+/*
+ * Note: using adjacent or general sibling selectors combined with
+ *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
+ *       See this article for more info and a potential fix:
+ *       http://css-tricks.com/webkit-sibling-bug/
+ */
+.switch-input {
+  &:checked + .switch-label {}
+  &:checked + .switch-label-on ~ .switch-selection {}
+}
+.switch-selection {
+  .switch-blue & {}
+  .switch-yellow & {}
+}
 
 
 
@@ -728,6 +830,31 @@ body {}
 // -----------------------------------------------------------
 //  ## 22  
 // -----------------------------------------------------------
+body {}
+.container {
+  .progress {}
+}
+.progress {}
+.progress-bar {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+}
+/*
+ * Note: using adjacent or general sibling selectors combined with
+ *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
+ *       See this article for more info and a potential fix:
+ *       http://css-tricks.com/webkit-sibling-bug/
+ */
+#five:checked ~ .progress > .progress-bar,  {}
+#twentyfive:checked ~ .progress > .progress-bar {}
+#fifty:checked ~ .progress > .progress-bar {}
+#seventyfive:checked ~ .progress > .progress-bar {} 
+#onehundred:checked ~ .progress > .progress-bar {}
+.radio {}
+.label {
+  .radio:checked + & {}
+}
 
 
 
@@ -740,6 +867,41 @@ body {}
 // -----------------------------------------------------------
 //  ## 23 
 // -----------------------------------------------------------
+%bg {}
+body {}
+a {
+  &:hover {}
+}
+.login {
+  p {}
+}
+input, button, label {}
+input[type=text], input[type=password] {
+  &:focus {}
+}
+label {}
+.forgot-password {}
+.login-submit {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+}
+.login-button {
+  /* Must use another pseudo element for the gradient background because Webkit */
+  /* clips the background incorrectly inside elements with a border-radius.     */
+  &:before {}
+  &:active:before {}
+  &:after {}
+}
+::-moz-focus-inner {}
+.lt-ie9 {
+  input[type=text], input[type=password] {}
+  .login-submit {
+    &:before, &:after {}
+  }
+  .login-button {}
+  .about {}
+}
 
 
 
@@ -752,6 +914,36 @@ body {}
 // -----------------------------------------------------------
 //  ## 24  
 // -----------------------------------------------------------
+body {}
+.container {}
+.nav {
+  > li,
+  &:active > .active {}
+  > li:hover {}
+  > li.active,
+  > .active:active,
+  > li:active {}
+  > li:active {}
+  > li:first-child {}
+  > li:last-child {}
+  > li + li,
+  &:active > .active + li,
+  &:active > li + .active {}
+  > .active + li,
+  > .active:active + li,
+  > li:active + li,
+  > li:active + .active {}
+  > li > a {
+    &:before {}
+  }
+  .nav-icon {
+    &:before {}
+  }
+}
+
+$sprite: url('../img/icons.png');
+[class*="icon-"] {}
+.icon-home {}
 
 
 
@@ -764,6 +956,32 @@ body {}
 // -----------------------------------------------------------
 //  ## 25  
 // -----------------------------------------------------------
+body {}
+.container {}
+.nav {
+  > li,
+  &:active > .active {}
+  > li:hover {}
+  > li.active,
+  > .active:active,
+  > li:active {}
+  > li:active {}
+  > li:first-child {}
+  > li:last-child {}
+  > li + li,
+  &:active > .active + li,
+  &:active > li + .active {}
+  > .active + li,
+  > .active:active + li,
+  > li:active + li,
+  > li:active + .active {}
+  > li > a {}
+  .nav-icon {}
+}
+
+$sprite: url('../img/icons.png');
+[class*="icon-"] {}
+.icon-home {}
 
 
 
@@ -776,6 +994,47 @@ body {}
 // -----------------------------------------------------------
 //  ## 26  
 // -----------------------------------------------------------
+html, body {}
+body {}
+a {}
+a:hover {}
+
+$sprite: url('../img/sprite.png');
+[class*="icon-"] {}
+.icon-psd-40 {}
+.icon-ai-24 {}
+.icon-close {}
+.widget {}
+.widget-heading {}
+.widget-title {}
+.widget-close {
+  &:hover {}
+  &:active {}
+}
+.widget-toolbar {
+  > li {
+    > a {}
+    + li {}
+  }
+}
+.download {
+  + .download {}
+  &:last-child {}
+}
+.download-name {}
+.download-icon {}
+.download-info {}
+.download-active {
+  .download-name {}
+  .download-icon {}
+}
+.download-progress {}
+.download-progress-bar {}
+.lt-ie9 {
+  .widget-close {}
+  .widget-close:hover {}
+  .widget-toolbar {}
+}
 
 
 
@@ -788,6 +1047,34 @@ body {}
 // -----------------------------------------------------------
 //  ## 27  
 // -----------------------------------------------------------
+body {}
+.window {}
+.window-titlebar {}
+.window-titlebar-button {
+  &:before {}
+}
+.window-toolbar {}
+.window-toolbar-button {
+  &.active {}
+  &:active > a {}
+}
+.window-body {}
+.switch-container {
+  & + & {}
+}
+.switch {}
+.switch-label {}
+.switch-handle {}
+.switch-input {
+  &:checked + .switch {
+    .switch-handle {}
+  }
+}
+
+$sprite: url('../img/icons.png');
+[class*="icon-"] {}
+.icon-cloud {}
+.icon-settings {}
 
 
 
@@ -800,6 +1087,20 @@ body {}
 // -----------------------------------------------------------
 //  ## 28  
 // -----------------------------------------------------------
+body {}
+.notepaper {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+}
+.quote {}
+.curly-quotes {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+}
+.quote-by {}
+.lt-ie8 .notepaper {}
 
 
 
@@ -812,6 +1113,18 @@ body {}
 // -----------------------------------------------------------
 //  ## 29  
 // -----------------------------------------------------------
+body {}
+.side-nav {}
+.side-nav-button, .side-nav:active .active {}
+.side-nav-button {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+  &:hover, &.active, &.active, &.active:active {}
+  &:hover {}
+  &:active, &.active, &.active:active {}
+  &:last-child {}
+}
 
 
 
@@ -824,6 +1137,36 @@ body {}
 // -----------------------------------------------------------
 //  ## 30  
 // -----------------------------------------------------------
+input, button { @include box-sizing(border-box); }
+::-moz-focus-inner { padding: 0; border: 0 }
+@font-face {
+  font-family: 'UbuntuMono';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/UbuntuMono.woff) format('woff');
+}
+
+body {}
+.calc {}
+.calc-display {}
+.calc-display-input {}
+.calc-row {}
+.calc-button {
+  &:first-child {}
+  &:active {}
+}
+.calc-button-gray {
+  &:active {}
+}
+.calc-button-red {
+  &:active {}
+}
+.calc-button-yellow {
+  &:active {}
+}
+.calc-button-big {}
+.lt-ie8 .calc-display-input {} /* border-box fix */
+.lt-ie7 .calc-row {} /* first-child fix */
 
 
 
@@ -836,6 +1179,22 @@ body {}
 // -----------------------------------------------------------
 //  ## 31  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.notif {
+  p {}
+  a {}
+  &:before {}
+}
+.notif-title {}
+.notif-close {
+  &:before {}
+}
+.notif-white {
+  &:before {}
+  .notif-title {}
+  a {}
+}
 
 
 
@@ -848,6 +1207,22 @@ body {}
 // -----------------------------------------------------------
 //  ## 32  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.month-picker {}
+.month-picker-fieldset {
+  > input {}
+}
+.month-picker-label, .month-picker-nav {}
+input:focus + .month-picker-label, .month-picker-nav:focus {}
+.month-picker-label {
+  &, &:before {}
+  &:before {}
+  input:checked + & {
+    &:before {}
+  }
+}
+.month-picker-nav {}
 
 
 
@@ -860,6 +1235,27 @@ body {}
 // -----------------------------------------------------------
 //  ## 33  
 // -----------------------------------------------------------
+input {}
+::-moz-focus-inner {}
+:-moz-placeholder {}
+::-webkit-input-placeholder {}
+
+html, body {}
+body {}
+.subscribe {}
+.subscribe-pitch {
+  > h3 {}
+  > p {}
+}
+.subscribe-form {}
+.subscribe-input {
+  &:focus {}
+}
+.subscribe-submit {
+  &:active {}
+  &:before {}
+}
+.lt-ie9 .subscribe-input {}
 
 
 
@@ -872,6 +1268,38 @@ body {}
 // -----------------------------------------------------------
 //  ## 34  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.settings {}
+.settings-header {
+  > h2 {}
+  > a {
+    &:before {}
+    &:active {}
+  }
+  .icon-close {}
+}
+.settings-form {
+  > h3 {}
+  > label {
+    &:before {}
+  }
+  input {}
+  strong {}
+}
+.settings-switch {
+  input:checked + & {}
+}
+.settings-switch-handle {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+}
+%icon:before {}
+.icon-wifi:before {}
+.icon-gps:before {}
+.icon-close:before {}
+.icon-prev:before {}
 
 
 
@@ -884,6 +1312,36 @@ body {}
 // -----------------------------------------------------------
 //  ## 35  
 // -----------------------------------------------------------
+body {}
+.container {}
+.share-btn {
+  &:active {
+    .share-btn-action {
+      &:after {}
+    }
+  }
+}
+.share-btn-count {
+  &:before, &:after {}
+  &:before {}
+}
+.share-btn-action {
+  &:before {}
+  &:after {}
+}
+.share-btn-tweet {
+  &:before {}
+  &:after {}
+  + .share-btn-count {
+    &:before {}
+  }
+}
+.share-btn-like {
+  &:before {}
+}
+.share-btn-plus {
+  &:before {}
+}
 
 
 
@@ -896,6 +1354,37 @@ body {}
 // -----------------------------------------------------------
 //  ## 36  
 // -----------------------------------------------------------
+body {}
+.container {
+  > .dropdown {}
+}
+.dropdown {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+}
+.dropdown-select {
+  &:focus {}
+  > option {}
+}
+/* Fix for IE 8 putting the arrows behind the select element. */
+.lt-ie9 {
+  .dropdown {}
+  .dropdown-select {}
+  .dropdown-select:focus {}
+}
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+@-moz-document url-prefix() { 
+  .dropdown-select {} 
+}
+.dropdown-dark {
+  &:before {}
+  &:after {}
+  .dropdown-select {
+    &:focus {}
+    > option {}
+  }
+}
 
 
 
@@ -908,6 +1397,23 @@ body {}
 // -----------------------------------------------------------
 //  ## 37  
 // -----------------------------------------------------------
+body {}
+.container {
+  .pagination {}
+}
+.pagination {
+  > a, > span {}
+  :first-child {}
+  > a {
+    &:hover {}
+  }
+  > span, > a:active {}
+  .prev, .next {}
+}
+.pagination-blue {
+  > a {}
+  > a.hover {}
+}
 
 
 
@@ -920,6 +1426,25 @@ body {}
 // -----------------------------------------------------------
 //  ## 38  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.container {
+  .button {}
+}
+.button {
+  &:hover, &.hover {}
+  &:active, &.active {}
+  &:before {}
+  &:after {}
+}
+@each $pair in $colors {
+  .button-#{nth($pair, 1)} {
+    &:hover, &.hover {}
+    &:active, &.active {}
+    &:before { }
+    &:after {}
+  }
+}
 
 
 
@@ -932,6 +1457,24 @@ body {}
 // -----------------------------------------------------------
 //  ## 39  
 // -----------------------------------------------------------
+body {}
+.analytics {}
+.analytics-title {}
+.analytics-chart { float: left; }
+.analytics-colchart {}
+.analytics-colgroup {}
+.analytics-col {}
+.analytics-bar {}
+.analytics-legend {
+  > p {}
+  span {}
+}
+.analytics-metrics {}
+.analytics-count {}
+.analytics-metric {
+  > span {}
+  & + & {}
+}
 
 
 
@@ -944,6 +1487,71 @@ body {}
 // -----------------------------------------------------------
 //  ## 40  
 // -----------------------------------------------------------
+body {}
+.container {
+  .notif {}
+}
+.notif {
+  &:before {}
+  p {}
+}
+.notif-title {
+  &:before, &:after {}
+}
+.notif-notice {
+  &:before {}
+  .notif-title {
+    &:before, &:after {}
+    &:after {}
+  }
+}
+.notif-alert {
+  &:before {}
+  .notif-title {
+    &:before, &:after {}
+    &:after {}
+  }
+}
+.notif-warn {
+  &:before {}
+  .notif-title {
+      &:before, &:after {}
+    &:after {}
+  }
+}
+.notif-controls {
+  > a {}
+}
+.notif-minimize {
+  &:before {}
+  &:hover:before {}
+}
+.notif-zoom {
+  &:before {}
+  &:hover:before {}
+}
+.notif-close {
+  &:before, &:after {}
+  &:after {}
+  &:hover:before, &:hover:after {}
+}
+
+/* IE 8 doesn't support CSS transforms; use Unicode instead. */
+.lt-ie9 {
+  .notif-notice {
+    .notif-title:before {}
+    .notif-title:after {}
+  }
+  .notif-alert {
+    .notif-title:before {}
+    .notif-title:after {}
+  }
+  .notif-close {
+    &:before {}
+    &:after {}
+    &:hover:before {}
+  }
+}
 
 
 
@@ -956,6 +1564,25 @@ body {}
 // -----------------------------------------------------------
 //  ## 41  
 // -----------------------------------------------------------
+/*
+ * Note: I didn't use borders because WebKit extends shadows underneath them, creating
+ * inconsistencies with other browsers. When the border is semi-transparent, as this
+ * snippet requires, it appears darker because of the shadow underneath it.
+ */
+
+body {}
+.notepad, .notepad:before, .notepad:after {}
+.notepad {
+  p, blockquote {}
+  :last-child {}
+  &:before, &:after {}
+  &:before {}
+}
+.notepad-heading {
+  > h1 {}
+  &:before, &:after {}
+  &:after {}
+}
 
 
 
@@ -968,6 +1595,25 @@ body {}
 // -----------------------------------------------------------
 //  ## 42  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.container {
+  .nav {}
+}
+.nav {}
+.nav-list {
+  > li {
+    & + li {}
+  }
+}
+.nav-link {
+  &:hover {}
+}
+.nav-counter {}
+@each $pair in $navCounterColors {
+  .nav-counter-#{nth($pair, 1)} {
+  }
+}
 
 
 
@@ -980,6 +1626,39 @@ body {}
 // -----------------------------------------------------------
 //  ## 43  
 // -----------------------------------------------------------
+::-moz-focus-inner {}
+:-moz-placeholder {}
+::-webkit-input-placeholder {}
+:-ms-input-placeholder {}
+body {}
+input, textarea, select, label {}
+.contact {}
+.contact-inner {}
+.contact:before, .contact:after, .contact-inner:before, .contact-inner:after {}
+.contact:before {}        // Shadow
+.contact-inner:before {}  // Border
+.contact-inner:after {}   // Inner border
+.contact:after {}         // Background
+.contact-input {
+  > input, > textarea {
+    &:focus {}
+    .lt-ie9 & {}
+  }
+  > textarea {}
+}
+.select {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+  > select {
+    &:focus {}
+  }
+}
+.contact-submit {
+  > input {
+    &:active {}
+  }
+}
 
 
 
@@ -992,6 +1671,12 @@ body {}
 // -----------------------------------------------------------
 //  ## 44  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.progress {}
+.progress-val {}
+.progress-bar {}
+.progress-in {}
 
 
 
@@ -1004,6 +1689,28 @@ body {}
 // -----------------------------------------------------------
 //  ## 45  
 // -----------------------------------------------------------
+::-moz-focus-inner {}
+:-moz-placeholder {}
+::-webkit-input-placeholder {}
+:-ms-input-placeholder {}
+
+body {}
+input, textarea, select, label {}
+.login {
+  > h1 {}
+}
+.login-input {
+  &:focus {}
+  .lt-ie9 & {}
+}
+.login-submit {
+  &:active {}
+}
+.login-help {
+  > a {
+    &:hover {}
+  }
+}
 
 
 
@@ -1016,6 +1723,27 @@ body {}
 // -----------------------------------------------------------
 //  ## 46  
 // -----------------------------------------------------------
+body {}
+.container {
+  > .social-button {}
+}
+.social-button {
+  &:before {
+    @include hidpi {}
+  }
+}
+.social-button-tw {
+  &:before {}
+  &:active {}
+}
+.social-button-fb {
+  &:before {}
+  &:active {}
+}
+.social-button-rss {
+  &:before {}
+  &:active {}
+}
 
 
 
@@ -1028,6 +1756,31 @@ body {}
 // -----------------------------------------------------------
 //  ## 47  
 // -----------------------------------------------------------
+body {}
+.plans {}
+.plan {
+  &:first-child {}
+  &:last-child {}
+}
+.plan-title {
+  &:before {}
+}
+.plan-price {
+  > span {}
+}
+.plan-features {
+  > li > strong {}
+}
+.plan-button {
+  &:active {}
+}
+.plan-tall {
+  > .plan-title {}
+  > .plan-price {}
+  > .plan-features {}
+  > .plan-button {}
+  + .plan {}
+}
 
 
 
@@ -1040,6 +1793,25 @@ body {}
 // -----------------------------------------------------------
 //  ## 48  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.container {
+  > .button {}
+}
+.button {
+  &:before {}
+  &:hover {}
+  &:active {
+    &:before {}
+  }
+}
+
+@each $pair in $buttonColors {
+  .button-#{nth($pair, 1)} {
+    &:hover {}
+    &:active {}
+  }
+}
 
 
 
@@ -1052,6 +1824,21 @@ body {}
 // -----------------------------------------------------------
 //  ## 49  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.clock {}
+.clock-block {
+  &:before, &:after {}
+  &:before {}
+}
+.clock-val {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+}
+.clock-unit {
+  &:after {}
+}
 
 
 
@@ -1064,6 +1851,41 @@ body {}
 // -----------------------------------------------------------
 //  ## 50  
 // -----------------------------------------------------------
+body {}
+.datepicker {
+  &:before,
+  &:after {}
+  &:before {}
+}
+.datepicker-caption {}
+.datepicker-prev,
+.datepicker-next {
+  &:before,
+  &:after {}
+  &:before {}
+}
+.datepicker-prev {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+}
+.datepicker-next {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+}
+.datepicker-title {}
+.datepicker-head {}
+.datepicker-th {}
+.datepicker-body {}
+.datepicker-td {
+  > a {
+    &:hover {}
+  }
+  &.today {}
+  &.off {}
+  tr:last-child > & {}
+}
 
 
 
@@ -1076,6 +1898,35 @@ body {}
 // -----------------------------------------------------------
 //  ## 51  
 // -----------------------------------------------------------
+body {}
+.checkout {
+  > p {}
+  > p + p {}
+}
+.checkout-header {}
+.checkout-title {
+  &:before {}
+}
+.checkout-price {
+  &:before {}
+}
+input {}
+.checkout-input {
+  &:focus {}
+  .lt-ie9 & {}
+}
+.checkout-name {}
+.checkout-card {}
+.checkout-exp,
+.checkout-cvc {}
+.checkout-btn {
+  &:active {}
+}
+:-moz-placeholder {}
+::-moz-placeholder {}
+::-webkit-input-placeholder {}
+:-ms-input-placeholder {}
+::-moz-focus-inner {}
 
 
 
@@ -1088,6 +1939,27 @@ body {}
 // -----------------------------------------------------------
 //  ## 52  
 // -----------------------------------------------------------
+body {}
+.container {
+  > .button { margin: 0 12px; }
+}
+.button {
+  &:hover {}
+  &:active,
+  &.active {}
+}
+.button-check {
+  &:before {}
+  &:active,
+  &.active {
+    &:before {}
+  }
+}
+.lt-ie9 {
+  .button { line-height: 46px; }
+  .button-check:before { content: none; }
+  .button-check:after {}
+}
 
 
 
@@ -1100,6 +1972,39 @@ body {}
 // -----------------------------------------------------------
 //  ## 53  
 // -----------------------------------------------------------
+body {}
+.widget {}
+.widget-tabs {}
+.widget-tab,
+%inactive-widget-tab {
+  > .widget-tab-link {}
+}
+.widget-tab + .widget-tab { }
+.widget-tab:last-child, // The left-most tab
+%active-widget-tab {
+  > .widget-tab-link {}
+}
+/* Deactivate the default tab when a preceding tab is activated. */
+%active-widget-tab ~ .widget-tab { @extend %inactive-widget-tab; }
+.widget-tab-link {}
+.widget-list {
+  > li + li {}
+  /* The last list is activated (visible) by default. */
+  &:last-of-type {}
+  &:target {
+    ~ .widget-list {}
+    /* First list activates the first tab, second list activates the second tab, etc. */
+    &:first-of-type  ~ .widget-tabs > .widget-tab:first-child  { @extend %active-widget-tab; }
+    &:nth-of-type(2) ~ .widget-tabs > .widget-tab:nth-child(2) { @extend %active-widget-tab; }
+    &:last-of-type   ~ .widget-tabs > .widget-tab:last-child   { @extend %active-widget-tab; }
+  }
+}
+.widget-list-link {
+  &:hover {}
+  li:last-child > & {}
+  > img {}
+  > span {}
+}
 
 
 
@@ -1112,6 +2017,28 @@ body {}
 // -----------------------------------------------------------
 //  ## 54  
 // -----------------------------------------------------------
+body {
+}
+.sign-up {
+  &:before, &:after {}
+  &:after {}
+}
+.sign-up-title {
+  &:before {}
+}
+input {}
+.sign-up-input {
+  &:focus {}
+  .lt-ie9 & {}
+}
+.sign-up-button {
+  &:active {}
+}
+:-moz-placeholder {}
+::-moz-placeholder {}
+::-webkit-input-placeholder {}
+:-ms-input-placeholder {}
+::-moz-focus-inner {}
 
 
 
@@ -1124,6 +2051,27 @@ body {}
 // -----------------------------------------------------------
 //  ## 55  
 // -----------------------------------------------------------
+body {}
+.cart {}
+.cart-top {}
+.cart-top-title {}
+.cart-top-info {}
+.cart-item {
+  &:first-child {}
+}
+.cart-item-pic {
+  > img {}
+  &:before {}
+}
+.cart-item-desc {}
+.cart-item-price {}
+.cart-bottom {
+  > .cart-button {}
+}
+.cart-button {
+  &:hover {}
+  &:active {}
+}
 
 
 
@@ -1136,6 +2084,26 @@ body {}
 // -----------------------------------------------------------
 //  ## 56  
 // -----------------------------------------------------------
+body {}
+.tasks {}
+.tasks-header {}
+.tasks-title {}
+.tasks-lists {
+  &:before {}
+}
+.tasks-list-item {
+  & + & {}
+}
+.tasks-list-cb {}
+.tasks-list-mark {
+  &:before {}
+  .tasks-list-cb:checked ~ & {
+    &:before {}
+  }
+}
+.tasks-list-desc {
+  .tasks-list-cb:checked ~ & {}
+}
 
 
 
@@ -1148,6 +2116,25 @@ body {}
 // -----------------------------------------------------------
 //  ## 57  
 // -----------------------------------------------------------
+body {}
+.container {
+  > .button { margin: 12px; }
+}
+.button {
+  &:before {}
+  &:hover:before { @include radial-gradient(farthest-corner, rgba(white, .18), rgba(white, .03)); }
+  &:active { @include box-shadow(inset 0 1px 2px rgba(black, .2)); }
+  &:active:before { content: none; }
+}
+
+$colors: green #5ca934, red  #d5452f, blue     #1097e6, orange #f4902a,
+         pink  #e8367f, gray #47494f, darkblue #3b5ca0, purple #9966cb;
+@each $pair in $colors {
+  .button-#{nth($pair, 1)} {
+    &:active {
+    }
+  }
+}
 
 
 
@@ -1160,6 +2147,26 @@ body {}
 // -----------------------------------------------------------
 //  ## 58  
 // -----------------------------------------------------------
+body {}
+.container {
+  > .switch {}
+}
+.switch {}
+.switch-input {}
+.switch-label {
+  &:before, &:after {}
+  &:before {}
+  &:after {}
+  .switch-input:checked ~ & {
+    &:before {}
+    &:after {}
+  }
+}
+.switch-handle {
+  &:before {}
+  .switch-input:checked ~ & {}
+}
+.switch-green > .switch-input:checked ~ .switch-label {}
 
 
 
@@ -1172,6 +2179,24 @@ body {}
 // -----------------------------------------------------------
 //  ## 59  
 // -----------------------------------------------------------
+body {}
+.plans {}
+.plan {}
+.plan-title {}
+.plan-price {}
+.plan-unit {}
+.plan-features {}
+.plan-feature {& + & {}
+}
+.plan-feature-unit {}
+.plan-feature-name {}
+.plan-button {
+  &:active {}
+}
+.plan-highlight {
+  .plan-button {}
+}
+.plan-recommended {}
 
 
 
@@ -1184,6 +2209,27 @@ body {}
 // -----------------------------------------------------------
 //  ## 60  
 // -----------------------------------------------------------
+body {}
+.register-title {}
+.register {}
+input {}
+.register-input {
+  &:focus {}
+}
+.register-button {
+  &:active {}
+  &:focus {}
+}
+.register-switch {}
+.register-switch-input {}
+.register-switch-label {
+  .register-switch-input:checked + & {}
+}
+:-moz-placeholder {}
+::-moz-placeholder {}
+::-webkit-input-placeholder {}
+:-ms-input-placeholder {}
+::-moz-focus-inner {}
 
 
 
@@ -1196,6 +2242,19 @@ body {}
 // -----------------------------------------------------------
 //  ## 61  
 // -----------------------------------------------------------
+html, body {}
+body {}
+.container {}
+.button {
+  &:first-child {}
+  &:last-child {}
+  &:only-child {}
+  & + & {}
+  &:active {}
+}
+.button-blue {
+  &:active {}
+}
 
 
 
